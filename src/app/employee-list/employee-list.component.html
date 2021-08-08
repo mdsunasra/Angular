@@ -1,0 +1,27 @@
+<div class="card my-5">
+    <div class="card-body">
+      <h3 class="text-center"> Employee List</h3>
+    <div>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Location</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.employeeId }}</td>
+            <td>{{ employee.employeeName }}</td>
+            <td>{{ employee.employeeEmail }}</td>
+            <td>{{ employee.employeeLocation}}</td>
+            <td><button (click)="onClick(employee)">Update</button></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
